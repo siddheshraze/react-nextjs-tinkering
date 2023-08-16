@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-function App() {
-  return (<></>);
+function Home() {
+  return (<><h1>test</h1></>);
 }
 
-export default App;
+export default Home;

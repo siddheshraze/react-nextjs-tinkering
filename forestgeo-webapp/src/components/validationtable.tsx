@@ -14,7 +14,7 @@ import {
   import { FileWithPath } from 'react-dropzone';
   import { useNavigate } from 'react-router-dom';
   import Button from './button';
-  import './ValidationTable.css';
+  import '@/styles/validationtable.css';
   
   export interface ValidationTableProps {
     /** An array of uploaded data. */
@@ -85,7 +85,7 @@ import {
             data: [],
           };
           return (
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} key={fileName}>
               <h3>file: {fileName}</h3>
   
               <Table>

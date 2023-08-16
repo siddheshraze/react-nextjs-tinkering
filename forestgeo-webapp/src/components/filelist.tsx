@@ -24,9 +24,8 @@ export default function FileList({ acceptedFiles }: FileListProps) {
   return acceptedFiles.length > 0 ? (
     <List>
       {acceptedFiles.map((file: FileSize) => (
-        <ListItem>
+        <ListItem key={file.path}>
           <ListItemText
-            key={file.path}
             primary={`${file.path} - ${file.size} bytes`}
           />
         </ListItem>

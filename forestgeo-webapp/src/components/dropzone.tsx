@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { useCallback } from 'react';
 import { useDropzone, FileWithPath, FileRejection, Accept } from 'react-dropzone';
 import { parse, ParseConfig } from 'papaparse';
@@ -6,6 +5,7 @@ import Box from '@mui/material/Box';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/material';
+import '@/styles/dropzone.css';
 
 export interface DropzonePureProps {
   /** Is someone dragging file(s) onto the dropzone? */

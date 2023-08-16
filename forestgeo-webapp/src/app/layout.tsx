@@ -4,6 +4,9 @@ import { Inter } from 'next/font/google';
 import NavBar from '@/components/navbar';
 import { Plot } from '@/components/selectplot';
 import React, { Suspense, useEffect, useState } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '@/styles/theme';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,15 +33,25 @@ export default function RootLayout({
       const { clientPrincipal } = payload;
       return clientPrincipal;
     } catch (error) {
-      console.error('No profile could be found');
-      return undefined;
+      if (process.env.NODE_ENV == 'development') {
+        console.error('No profile could be found');
+        return undefined;
+      }
     }
   }
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>{userInfo ? <NavBar /> : <p></p>}</div>
-        <div>{children}</div>
+        <section>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <div>
+              <NavBar />
+            </div>
+            <div>{children}</div>
+          </ThemeProvider>
+        </section>
+        {/* <div>{userInfo ? <NavBar /> : <p></p>}</div> */}
       </body>
     </html>
   );
