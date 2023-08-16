@@ -12,7 +12,6 @@ const SITE_LIST = [
   { text: "Home", href: "/" },
   { text: "Browse", href: "/browse" },
   { text: "Reports", href: "/reports" },
-  { text: "Upload", href: "/upload" },
   { text: "Validate", href: "/validate" },
 ];
 
