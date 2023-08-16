@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-export interface NavProps {
+export interface NavItemProps {
     text : string,
     href : string,
     active: Boolean
 }
 
-const NavItem = ({ text, href, active } : NavProps) => {
+const NavItem = ({ text, href, active } : NavItemProps) => {
     return (
         <Link href={href} className={`nav__item ${
             active ? "active" : ""
