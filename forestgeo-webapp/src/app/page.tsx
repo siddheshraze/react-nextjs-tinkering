@@ -1,5 +1,7 @@
-export default function Home() {
-  return (
-    <h1>Home Page</h1>
-  )
+import React, { useEffect, useState } from 'react';
+
+function App() {
+  return (<></>);
 }
+
+export default App;

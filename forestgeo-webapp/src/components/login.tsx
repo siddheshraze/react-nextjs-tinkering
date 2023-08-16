@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import GetUser, { clientPrincipal } from "./getuser";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export interface LoginPureProps {}
 export function LoginPure() {
