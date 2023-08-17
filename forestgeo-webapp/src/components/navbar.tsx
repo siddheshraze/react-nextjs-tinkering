@@ -7,6 +7,7 @@ import GetUser, { clientPrincipal } from "./getuser";
 import { Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
+import { SelectPlotProps } from "./selectplot";
 
 const SITE_LIST = [
   { text: "Home", href: "/" },
@@ -17,6 +18,7 @@ const SITE_LIST = [
 
 export interface NavBarProps {
   userDetails?: string;
+  plotProps?: SelectPlotProps;
 }
 
 export default function NavBarPopulated() {

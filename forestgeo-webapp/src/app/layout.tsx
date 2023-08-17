@@ -3,7 +3,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import NavBar from '@/components/navbar';
 import { Plot } from '@/components/selectplot';
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/styles/theme';
 import CssBaseline from '@mui/material/CssBaseline';
